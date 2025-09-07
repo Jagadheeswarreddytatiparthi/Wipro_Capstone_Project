@@ -46,7 +46,7 @@ public class nopCommercePageclass {
 	By removeBtnLocator = By.cssSelector(".remove-from-cart input[type='checkbox']");
     By removeitembutton=By.xpath("//td[@class=\"remove-from-cart\"]");
 	By updateCartBtn = By.name("updatecart");
-	By wishlistBtn=By.id("add-to-wishlist-button-17");
+	By wishlistBtn=By.xpath("//button[@title=\"Add to wishlist\"]");
 	
 	By navToCartLink=By.xpath("//*[@id=\"topcartlink\"]/a/span[1]");
 	
@@ -85,7 +85,7 @@ public class nopCommercePageclass {
 	
 	By logoutBtn=By.xpath("/html/body/div[6]/div[1]/div[1]/div[2]/div[1]/ul/li[2]/a");
 	
-	By addToCompareBtn=By.xpath("//*[@id=\"product-details-form\"]/div/div[1]/div[2]/div[8]/div[2]/button");
+	By addToCompareBtn=By.xpath("//button[@type=\"button\"]");
 	
 	By changeCurrencyBtn=By.id("customerCurrency");
 	
@@ -181,28 +181,50 @@ public class nopCommercePageclass {
 	 }
 	 public void deleteitemfromCart() {
 		 WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-
-		    try {
+		 try {
 		        WebElement notificationLink = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id='bar-notification']/div/p/a")));
 		        notificationLink.click();
-		        wait.until(ExpectedConditions.invisibilityOf(notificationLink)); // Wait for it to disappear
+		        wait.until(ExpectedConditions.invisibilityOf(notificationLink));
 		    } catch (TimeoutException | NoSuchElementException e) {
 		        System.out.println("Notification not present or already closed.");
 		    }
 
-		   
-               driver.findElement(removeitembutton).click();
-	    List<WebElement> removeButtons = driver.findElements(removeBtnLocator);
-	    if (!removeButtons.isEmpty()) {
-		        for (WebElement btn : removeButtons) {
-		            if (!btn.isSelected()) {
-	                btn.click();
-	            }
-		      }
-		        driver.findElement(updateCartBtn).click(); // Submit removal
-	}
+		    // Step 2: Wait for cart page to load and locate remove checkboxes
+		    List<WebElement> removeCheckboxes = wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(removeBtnLocator));
+
+		    // Step 3: Select all checkboxes that are not already selected
+		    for (WebElement checkbox : removeCheckboxes) {
+		        if (checkbox.isDisplayed() && checkbox.isEnabled() && !checkbox.isSelected()) {
+		            ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", checkbox);
+		            checkbox.click();
+		        }
+		    }
+
+		    // Step 4: Click update cart button
+		    WebElement updateCartBtn = wait.until(ExpectedConditions.elementToBeClickable(By.name("updatecart")));
+		    updateCartBtn.click();
+		}
+
+//		    try {
+//		        WebElement notificationLink = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id='bar-notification']/div/p/a")));
+//		        notificationLink.click();
+//		        wait.until(ExpectedConditions.invisibilityOf(notificationLink)); // Wait for it to disappear
+//		    } catch (TimeoutException | NoSuchElementException e) {
+//		        System.out.println("Notification not present or already closed.");
+//		    }
+//
+//		   
+//               driver.findElement(removeBtnLocator).click();
+//	    List<WebElement> removeButtons = driver.findElements(removeBtnLocator);
+//	    if (!removeButtons.isEmpty()) {
+//		        for (WebElement btn : removeButtons) {
+//		            if (!btn.isSelected()) {
+//	                btn.click();
+//	            }
+//		      }
+//		        driver.findElement(updateCartBtn).click(); // Submit removal
+//	}
  
-	 }
 	
 	 public void addToWishlist() {
 		 driver.findElement(wishlistBtn).click();
