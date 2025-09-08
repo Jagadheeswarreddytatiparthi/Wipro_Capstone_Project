@@ -138,9 +138,9 @@ public class nopCommercePageclass {
 		 driver.findElement(Email).sendKeys(email);
 		 
 	 }
-	 public void loginpass(String pass) {
+	 public void loginpass(String password) {
 		
-		 driver.findElement(Password).sendKeys(pass);
+		 driver.findElement(Password).sendKeys(password);
 	 }
 	
 	 public void loginButton() {
@@ -150,9 +150,9 @@ public class nopCommercePageclass {
 	 public void clickonsearchbox() {
 		driver.findElement(searchbox).click();
 	 }
-	 public void entersearchitem(String string) {
+	 public void entersearchitem(String searchTerm) {
 		    driver.findElement(searchbox).click();
-			driver.findElement(searchbox).sendKeys(string);
+			driver.findElement(searchbox).sendKeys(searchTerm);
 		 }
 	 public void clickSearchBtn() {
 		driver.findElement(searchBtn).click();

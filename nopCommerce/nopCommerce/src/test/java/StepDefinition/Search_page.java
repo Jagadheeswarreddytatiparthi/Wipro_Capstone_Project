@@ -30,9 +30,9 @@ public class Search_page {
 	   
 	}
 
-	@When("Enter an item name to search")
-	public void enter_an_item_name_to_search() throws InterruptedException {
-		 pg.entersearchitem("Apple icam");
+	@When("Enter an {string} to search")
+	public void enter_an_to_search(String searchTerm) throws InterruptedException {
+		 pg.entersearchitem(searchTerm);
 		 Thread.sleep(2000);
 	    
 	}

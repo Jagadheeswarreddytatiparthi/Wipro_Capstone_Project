@@ -28,17 +28,17 @@ public class Login_Page {
 	   
 	}
 
-	@When("Fill the email field")
-	public void fill_the_email_field() throws InterruptedException {
+	@When("Fill the {string} field")
+	public void fill_the__field(String email) throws InterruptedException {
 	    pg=new nopCommercePageclass(driver);
-		pg.loginEMail("tatiparthijr2001@gmail.com");
+		pg.loginEMail(email);
 	    
 	}
 
-	@When("fill the password field")
-	public void fill_the_password_field() throws InterruptedException {
+	@When("fill the {string} field")
+	public void fill_the_field(String password) throws InterruptedException {
 	    pg=new nopCommercePageclass(driver);
-		pg.loginpass("Reddy@7125");
+		pg.loginpass(password);
 	   
 	}
 
