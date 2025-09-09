@@ -2,6 +2,9 @@
 # TOPIC: NopCommerce Website
 <img width="250" height="50" alt="image" src="https://github.com/user-attachments/assets/aa2b2552-9c20-468c-88fa-01d78875153c" />
 
+Capstone project (manual + automation testing) on nopcommerce.com
+URL: https://demo.nopcommerce.com/
+
 # Project Overview
 
 project involves comprehensive testing of the nopCommerce demo website, including both manual and automated testing approaches.
