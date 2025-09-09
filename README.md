@@ -1,9 +1,13 @@
 # Wipro_Capstone_Project
 # TOPIC: NopCommerce Website
 <img width="250" height="50" alt="image" src="https://github.com/user-attachments/assets/aa2b2552-9c20-468c-88fa-01d78875153c" />
+
 # Project Overview
-This project involves comprehensive testing of the nopCommerce demo website, including both manual and automated testing approaches.
+
+project involves comprehensive testing of the nopCommerce demo website, including both manual and automated testing approaches.
+
 # Features Tested
+
 User Registration and Login
 
 Product Search and Navigation
