@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="170.287" tests="17" skipped="0" failures="0" errors="0" timestamp="2025-09-08T17:35:52.586518900Z">
+<testcase classname="check the functionality of addtocart button" name="Click on search box search for an item add it to add to compare list" time="7.555">
+<system-out><![CDATA[
+Given User on nopCommerce HOME page.........................................passed
+When Click on search box  for searching item................................passed
+And enter an item to search.................................................passed
+And click on addtocompare button............................................passed
+Then Item is added to addtocompare successfully.............................passed
+]]></system-out>
+</testcase>
+<testcase classname="check the functionality of Add to cart button" name="Go to home page click on search box enter an item search for it and add that item into cart" time="14.033">
+<system-out><![CDATA[
+Given nopCommerce home PagE.................................................passed
+When Click on Search Box....................................................passed
+And Enter an item name to Search............................................passed
+And Click on search buttoN..................................................passed
+And Click on Addtocart button...............................................passed
+Then Item is added to cart successfully.....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="To check the functionality of add to wishlist icon" name="Check the functinality of add to wishlist is it adding to wishlist" time="10.591">
+<system-out><![CDATA[
+Given USER on home page.....................................................passed
+When User search for item by entering item name by clicking search box......passed
+And Click on the add to wishlist button.....................................passed
+Then Item is added to wishlist successfully.................................passed
+]]></system-out>
+</testcase>
+<testcase classname="To change currency of items prices" name="Change the currency of page" time="7.454">
+<system-out><![CDATA[
+Given nopCommerce HOME page.................................................passed
+When click on currency of US Dollar.........................................passed
+And Select from dropdown any one............................................passed
+Then Currency of prices is changed successfully.............................passed
+]]></system-out>
+</testcase>
+<testcase classname="To Check the functionality of Checkout page" name="Checkout the items in cart if the details all are correct" time="13.567">
+<system-out><![CDATA[
+Given user on homepage......................................................passed
+When search a product and add to cart.......................................passed
+And Navigate to shopping cart...............................................passed
+And click on agree terms....................................................passed
+And click on checkout button................................................passed
+And click on checkout as guest button.......................................passed
+And enter billing details...................................................passed
+And click on continue button................................................passed
+And select shipping method and click continue button........................passed
+And select payment method and click continue button.........................passed
+And click continue for payment information..................................passed
+And click on confirm button.................................................passed
+Then Placed order successfully..............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Check the Login flow" name="Go to home page click on Login - #1.1" time="6.133">
+<system-out><![CDATA[
+Given nopCommerce Home page.................................................passed
+When Click on Login.........................................................passed
+And Fill the "tatiparthijr2001@gmail.com" field.............................passed
+And fill the "Reddy@7125" field.............................................passed
+And click on login button...................................................passed
+Then login is successful....................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Check the Login flow" name="Go to home page click on Login - #1.2" time="7.268">
+<system-out><![CDATA[
+Given nopCommerce Home page.................................................passed
+When Click on Login.........................................................passed
+And Fill the "tatiparthijagadheeswarreddy@gmail.com" field..................passed
+And fill the "Jaga@8883" field..............................................passed
+And click on login button...................................................passed
+Then login is successful....................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Check the Login flow" name="Go to home page click on Login - #1.3" time="5.665">
+<system-out><![CDATA[
+Given nopCommerce Home page.................................................passed
+When Click on Login.........................................................passed
+And Fill the "abcdef@gmail.com" field.......................................passed
+And fill the "abcd@123" field...............................................passed
+And click on login button...................................................passed
+Then login is successful....................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Check the Login flow" name="Go to home page click on Login - #1.4" time="5.797">
+<system-out><![CDATA[
+Given nopCommerce Home page.................................................passed
+When Click on Login.........................................................passed
+And Fill the "7834957@gmail.com" field......................................passed
+And fill the "ahkdsgfg" field...............................................passed
+And click on login button...................................................passed
+Then login is successful....................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="To check the functionality of logout" name="Check logout is working properly" time="6.372">
+<system-out><![CDATA[
+Given UseR is on Home page..................................................passed
+When Clicking on login button...............................................passed
+And entering valid email and password and click on login button.............passed
+And after click on logout button............................................passed
+Then You are logout from your account successfully..........................passed
+]]></system-out>
+</testcase>
+<testcase classname="Check registration flow" name="Go to home page Click on Register" time="6.405">
+<system-out><![CDATA[
+Given nopCommerce home page.................................................passed
+When click on Register......................................................passed
+And Select gender...........................................................passed
+And Fill firstname..........................................................passed
+And fill last name..........................................................passed
+And fill email..............................................................passed
+And fill companyname........................................................passed
+And fill password and confirm password......................................passed
+And click on register button................................................passed
+Then registration is successfull............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Check the functionality of remove from cart" name="Go to shopping cart if no item is there Search and add that item" time="23.389">
+<system-out><![CDATA[
+Given nopCommerce HOme page.................................................passed
+When Click on search box....................................................passed
+And Enter a search item.....................................................passed
+And click on search button..................................................passed
+And Click on addtocart button...............................................passed
+And Click on Shopping cart..................................................passed
+And click on remove from cart...............................................passed
+Then item is removed from cart..............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="check the functionality of search box" name="Go to home page click on search box enter an item search for it - #1.1" time="11.888">
+<system-out><![CDATA[
+Given nopCommerce home Page.................................................passed
+When Click on Search box....................................................passed
+And Enter an "computer" to search...........................................passed
+And Click on search button..................................................passed
+Then searched items showed successfully.....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="check the functionality of search box" name="Go to home page click on search box enter an item search for it - #1.2" time="11.568">
+<system-out><![CDATA[
+Given nopCommerce home Page.................................................passed
+When Click on Search box....................................................passed
+And Enter an "cellphone" to search..........................................passed
+And Click on search button..................................................passed
+Then searched items showed successfully.....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="check the functionality of search box" name="Go to home page click on search box enter an item search for it - #1.3" time="11.26">
+<system-out><![CDATA[
+Given nopCommerce home Page.................................................passed
+When Click on Search box....................................................passed
+And Enter an "books" to search..............................................passed
+And Click on search button..................................................passed
+Then searched items showed successfully.....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="check the functionality of search box" name="Go to home page click on search box enter an item search for it - #1.4" time="11.149">
+<system-out><![CDATA[
+Given nopCommerce home Page.................................................passed
+When Click on Search box....................................................passed
+And Enter an "software" to search...........................................passed
+And Click on search button..................................................passed
+Then searched items showed successfully.....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="To check funtionality of select caterogy by selecting particular item" name="Check from Appareals cateogry click on shoes" time="9.885">
+<system-out><![CDATA[
+Given User on nopCommerce homepage..........................................passed
+When Click on Apperals from below categories................................passed
+And Click on shoes it is showing shoes are not..............................passed
+Then products related to shoes are displayed successfully...................passed
+]]></system-out>
+</testcase>
+</testsuite>
