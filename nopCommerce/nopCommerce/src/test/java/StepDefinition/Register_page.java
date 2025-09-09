@@ -39,38 +39,38 @@ public class Register_page {
 	   
 	}
 
-	@When("Fill firstname")
-	public void fill_firstname() throws InterruptedException {
+	@When("Fill firstname as {string}")
+	public void fill_firstname_as(String firstname) throws InterruptedException {
 		nopCommercePageclass pg=new nopCommercePageclass(driver);
-		pg.enterFirstName("Jagadheeswarreddy");
+		pg.enterFirstName(firstname);
 		
 	   
 	}
 
-	@When("fill last name")
-	public void fill_last_name() throws InterruptedException {
+	@When("fill lastname as {string}")
+	public void fill_lastname_as(String lastname) throws InterruptedException {
 		nopCommercePageclass pg=new nopCommercePageclass(driver);
-	    pg.enterLastName("Tatiparthi");
+	    pg.enterLastName(lastname);
 	}
 
-	@When("fill email")
-	public void fill_email() throws InterruptedException {
+	@When("fill email as {string}")
+	public void fill_email_as(String email) throws InterruptedException {
 		nopCommercePageclass pg=new nopCommercePageclass(driver);
-		pg.enterEmail("tatiparthijr2001@gmail.com");
+		pg.enterEmail(email);
 	   
 	}
 
-	@When("fill companyname")
-	public void fill_companyname() throws InterruptedException {
+	@When("fill companyName as {string}")
+	public void fill_company_name_as(String companyName) throws InterruptedException {
 		nopCommercePageclass pg=new nopCommercePageclass(driver);
-		pg.entercompanyname("Wipro");
+		pg.entercompanyname(companyName);
 	   
 	}
 
-	@When("fill password and confirm password")
-	public void fill_password_and_confirm_password() throws InterruptedException {
+	@When("fill password  and confirmpassword as {string}")
+	public void fill_password_and_confirmpassword_as(String password) throws InterruptedException {
 		nopCommercePageclass pg=new nopCommercePageclass(driver);
-		pg.setPasswordAndConfirm("Reddy@7125");
+		pg.setPasswordAndConfirm(password);
 	   
 	}
 
